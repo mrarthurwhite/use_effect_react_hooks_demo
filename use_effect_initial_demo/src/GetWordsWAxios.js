@@ -1,15 +1,14 @@
 import './App.css';
-import {  useEffect, useState } from 'react';
-
-import React from 'react';
+import React, {  useEffect, useState } from 'react';
+import axious from 'axios';
 
 function App() {
   const [words, setWords] = useState([]);
 
   async function fetchData(){
-    const response= await fetch('http://localhost:1111/wordlist');
-    const data = await (response.json());
-    setWords(data);
+    let url = 'http://localhost:1111/wordlist';
+    const response= await axios(url);
+    setWords(response);
   };
 
   useEffect(() => {fetchData()}, [] );
