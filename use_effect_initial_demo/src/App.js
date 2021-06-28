@@ -7,7 +7,8 @@ function App() {
   const [words, setWords] = useState([]);
 
   async function fetchData(){
-    const response= await fetch('http://localhost:1111/wordlist');
+    let url = 'http://localhost:1111/wordlist';
+    const response= await fetch(url);
     const data = await (response.json());
     setWords(data);
   };

@@ -7,10 +7,8 @@ function GetWordsWAxios() {
 
   async function fetchData(){
     let url = 'http://localhost:1111/wordlist';
-    const response= await axios(url);
-    setWords(response);
-
-
+    const result= await axios(url);
+    setWords(result.data);
   };
 
   useEffect(() => {fetchData()}, [] );
