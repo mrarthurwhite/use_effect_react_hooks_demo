@@ -1,6 +1,6 @@
 import './App.css';
 import React, {  useEffect, useState } from 'react';
-import axious from 'axios';
+import axios from 'axios';
 
 function GetWordsWAxios() {
   const [words, setWords] = useState([]);
@@ -9,6 +9,8 @@ function GetWordsWAxios() {
     let url = 'http://localhost:1111/wordlist';
     const response= await axios(url);
     setWords(response);
+
+
   };
 
   useEffect(() => {fetchData()}, [] );
@@ -17,7 +19,7 @@ function GetWordsWAxios() {
     return (
     <>
     {
-      words.map(w=> <div>{w.word}</div>)
+     words.map(w=> <div>{w.word}</div>)
     }
     </>
   );
