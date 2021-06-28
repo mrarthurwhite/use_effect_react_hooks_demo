@@ -6,17 +6,13 @@ import React from 'react';
 function App() {
   const [words, setWords] = useState([]);
 
-  let fetchData = () => {
-                          fetch('http://localhost:1111/wordlist')
-                          .then(response => response.json())
-                          .then (data =>
-                                            {
-                                                  setWords(data);
-                                            } 
-                                          )
-                        };
+  async function fetchData(){
+    const response= await fetch('http://localhost:1111/wordlist');
+    const data = await (response.json());
+    setWords(data);
+  };
 
-  useEffect(fetchData, [] );
+  useEffect(() => {fetchData()}, [] );
 
 
     return (
