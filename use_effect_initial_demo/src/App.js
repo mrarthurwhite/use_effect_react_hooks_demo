@@ -7,7 +7,7 @@ function App() {
   const [words, setWords] = useState([]);
 
   let fetchData = () => {
-                          fetch('http://localhost:1111/words')
+                          fetch('http://localhost:1111/wordlist')
                           .then(response => response.json())
                           .then (data =>
                                             {
