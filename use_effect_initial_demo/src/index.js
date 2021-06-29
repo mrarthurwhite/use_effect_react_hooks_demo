@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import GetWordsWAxios from './GetWordsWAxios';
+import GetWordsWAxiosNLoading from './GetWordsWAxiosNLoading';
 //    <App /> <GetWordsWAxios />
 
 ReactDOM.render(
   <React.StrictMode>
 
-    <GetWordsWAxios />
+    <GetWordsWAxiosNLoading />
   </React.StrictMode>,
   document.getElementById('root')
 );
