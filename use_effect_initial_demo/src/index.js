@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import GetWordsWAxios from './GetWordsWAxios';
+//import App from './App';
+//import GetWordsWAxios from './GetWordsWAxios';
 import GetWordsWAxiosNLoading from './GetWordsWAxiosNLoading';
 //    <App /> <GetWordsWAxios />
 
